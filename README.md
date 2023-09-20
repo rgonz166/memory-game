@@ -1,2 +1,3 @@
-# memory-game
+# Memory-Game
+
 Quick React Memory Game
