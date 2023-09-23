@@ -14,7 +14,14 @@ function App() {
 
   const handleClick = (card) => {
     if (!disabled) {
-      pickOne ? setPickTwo(card) : setPickOne(card);
+      if (pickOne) {
+        // Check to see if double clicking the same card
+        if (pickOne.id !== card.id) {
+          setPickTwo(card);
+        }
+      } else {
+        setPickOne(card);
+      }
     }
   };
 
