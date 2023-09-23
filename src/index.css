@@ -161,6 +161,10 @@ button {
     border-radius: 0;
   }
 
+  footer {
+    bottom: 95%;
+  }
+
   .grid {
     margin: auto auto 3rem auto;
   }
