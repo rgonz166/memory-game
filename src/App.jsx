@@ -96,6 +96,7 @@ function App() {
           );
         })}
       </div>
+      <footer>Created By: Raul Gonzalez</footer>
     </>
   );
 }
