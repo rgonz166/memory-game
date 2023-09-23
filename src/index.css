@@ -60,6 +60,13 @@ header {
   animation: var(--card-enter);
   justify-content: space-evenly;
 }
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+}
 h3 {
   margin: auto;
   color: var(--text);
@@ -74,6 +81,7 @@ button {
   padding: 0.5rem;
   border-radius: 3px;
   margin: auto;
+  background-color: var(--orange);;
 }
 
 /* ========= Grid ========================= */
