@@ -9,7 +9,7 @@ function App() {
   const [pickOne, setPickOne] = useState(null);
   const [pickTwo, setPickTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [wins, setWins] = useState(0);
+  const [wins, setWins] = useState(localStorage.getItem(""));
   const [setBadge, clearBadge] = useAppBadge();
 
   const handleClick = (card) => {
@@ -27,9 +27,19 @@ function App() {
   const handleNewGame = () => {
     clearBadge();
     setWins(0);
+    localStorage.setItem("wins", 0);
     handleTurn();
     setCards(shuffle);
   };
+
+  useEffect(() => {
+    const storedWins = parseInt(localStorage.getItem("wins"));
+    if (storedWins) {
+      setWins(storedWins);
+    } else {
+      setWins(0);
+    }
+  }, []);
 
   useEffect(() => {
     let pickTimer;
@@ -73,6 +83,7 @@ function App() {
     if (cards.length && checkWin.length < 1) {
       console.log("You win!");
       setWins(wins + 1);
+      localStorage.setItem("wins", wins + 1);
       handleTurn();
       setBadge();
       setCards(shuffle);
