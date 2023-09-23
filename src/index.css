@@ -122,6 +122,12 @@ button {
   transform: var(--rotate-0);
   transition-delay: var(--delay);
 }
+.hover {
+  transition: all .2s ease-in-out;
+}
+.hover:hover {
+  transform: scale(1.1);
+}
 .selected .card-face {
   transform: var(--rotate-0);
   transition-delay: var(--delay);

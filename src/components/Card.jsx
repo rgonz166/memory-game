@@ -1,6 +1,6 @@
 const Card = ({ image, selected, onClick }) => {
   return (
-    <div className="card">
+    <div className="card hover">
       <div className={selected && "selected"}>
         <img src={image} alt="" className="card-face" />
         <img
